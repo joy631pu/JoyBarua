@@ -1,0 +1,401 @@
+/*
+COLOR PALETTE
+https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
+#F7FFF7 - almost white
+#343434 - dark gray - almost black
+#2F3061 - blue dark
+#FFE66D - yellow
+#A1C6D7 - blue light
+#2F3061 - Very dark desaturated blue
+#06d85f - Strong cyan - lime green
+*/
+
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+    color:#343434;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+img{
+    width: 400px;
+    height:250px;
+}
+
+a {
+    color: #FFE66D;
+}
+
+a:hover {
+    text-decoration: none;
+  }
+
+h1{
+  font-size: 100px;
+  line-height: 1;
+}
+
+h2{
+  font-size: 45px;
+   
+}
+
+h1, h2 {
+  font-family:'Segoe UI', cursive;
+  font-weight: 400;
+  margin:0;
+}
+
+.content-wrap {
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding:60px 0;
+  }
+
+h3{
+  margin-bottom: 0;
+}
+.item-details h3+p{
+  font-style: italic;
+}
+.item-details h3~p{
+  margin: 0;
+}
+.divider > section{
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-bottom: none;
+}
+
+/* Profile
+------------------------------------*/
+header {
+    background:#A1C6D7;
+    color:black;
+   
+  }
+
+/* Projects
+------------------------------------*/
+.projects {
+    background:#F7FFF7;
+  }
+  .projects a {
+    color: #2F3061;
+  }
+  .projects .btn {
+    color: #F7FFF7;
+    background: #2F3061;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+  .projects .btn:hover {
+    background: rgba(47, 48, 97, 80%);
+  }
+
+  .project-item{
+    overflow: hidden;
+    margin-top: 20px;
+  }
+
+  
+
+  .project-item h3{
+    margin-top: 0;
+  }
+
+/* Work Experience
+------------------------------------*/
+.work-experience {
+    background:blanchedalmond;
+  }
+
+  
+
+/* Education
+------------------------------------*/
+.education{
+  background-image: url(placeholderimages/education2.jpg);
+  background-size: cover;
+  background-position: top left;
+  padding-bottom: 100px;
+  
+}
+
+.education p{
+  width: 60%;
+}
+
+/* Contact Info
+------------------------------------*/
+footer {
+    background: #343434;
+    color: #F7FFF7;
+    
+  }
+
+.contact-list{
+  list-style-type: none;
+  padding: 0;
+  
+}
+
+.contact-list a{
+  padding: 15px;
+  display: inline-block;
+}
+/*-----Button for creating a popup Modal----*/
+/*------Original CSS Code was found in https://codepen.io/sahil4test/pen/xERYvX site and modified----*/
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  background-color:#343434;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+/* Responsive
+------------------------------------*/
+@media screen and (min-width:750px){
+  header, footer {
+    text-align: center;
+  }
+  .project-item img{
+    float: left;
+    margin-right: 20px;
+  }
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width:749px){
+  h1 {
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+ h2 {
+    line-height: 1;
+ }
+ .contact-list a {
+  padding: 5px;
+}
+.popup{
+  width: 70%;
+}
+  
+}
+/*----Navigation Bar---*/
+/*-----Original Code was found in a Youtube Video Tutorial https://www.youtube.com/watch?v=RqM5Wzuil5U and then Modified------*/
+:root{
+  --color-1: #673ab7;
+}
+
+*{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	list-style: none;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+.align-items-center{
+	align-items: center;
+}
+.justify-content-between{
+	justify-content: space-between;
+}
+/*header*/
+.header{
+	background-color: var(--color-1);
+	padding:12px 0;
+	position: relative;
+}
+
+.header .nav{
+	padding:0 150px;
+}
+.header .logo a{
+	font-size: 30px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+.header .nav ul li{
+	display: inline-block;
+	margin-left: 40px;
+}
+.header .nav ul li a{
+	display: block;
+	font-size: 16px;
+	padding:10px 0;
+	color: rgba(255,255,255,0.7);
+	text-transform: capitalize;
+	transition: all 0.5s ease;
+}
+.header .nav ul li a:hover,
+.header .nav ul li a.active{
+	color: #ffffff;
+}
+.header #nav-check{
+	position: absolute;
+	opacity:0;
+	pointer-events: none;
+}
+.nav-toggler{
+	height: 34px;
+	width: 44px;
+	background-color: #ffffff;
+	border-radius: 4px;
+	cursor: pointer;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	margin-right: 15px;
+}
+.nav-toggler span{
+	display: block;
+	height: 2px;
+	width: 20px;
+	background-color: var(--color-1);
+	position: relative;
+}
+.nav-toggler span::before,
+.nav-toggler span::after{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-1);
+   left:0;
+}
+.nav-toggler span::before{
+	top: -6px;
+}
+.nav-toggler span::after{
+	top: 6px;
+}
+@media(max-width: 991px){
+    .nav-toggler{
+    	display: flex;
+    }
+    .header .nav{
+    	position: absolute;
+    	left:0;
+    	top:100%;
+    	width: 100%;
+    	background-color: var(--color-1);
+    	border-top: 1px solid rgba(255,255,255,0.2);
+    	opacity:0;
+    	visibility: hidden;
+    }
+    .header .nav ul li{
+    	display: block;
+    	margin:0;
+    }
+    .header #nav-check:checked ~ .nav{
+       opacity: 1;
+       visibility: visible;
+    }
+    .header #nav-check:focus ~ .nav-toggler{
+    	box-shadow: 0 0 15px #000000;
+    }
+    .header #nav-check:checked ~ .nav-toggler span{
+    	background-color: transparent;
+    }
+    .header #nav-check:checked ~ .nav-toggler span::before{
+    	top:0;
+    	transform: rotate(45deg);
+    }
+    .header #nav-check:checked ~ .nav-toggler span::after{
+    	top:0;
+    	transform: rotate(-45deg);
+    }
+}
+
